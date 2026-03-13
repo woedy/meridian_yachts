@@ -4,37 +4,49 @@ const Footer = () => (
   <footer className="bg-secondary border-t border-border">
     <div className="max-w-7xl mx-auto px-6 py-16">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-        {/* Brand */}
         <div>
           <h3 className="font-display text-2xl mb-4">
             MERIDIAN<span className="text-gradient-gold">.</span>
           </h3>
           <p className="text-muted-foreground font-body text-sm font-light leading-relaxed">
-            Designing and building bespoke yachts for those who demand the extraordinary.
+            Independent advisors in superyacht sales, charter, and build
+            representation for clients who expect discretion, precision, and
+            measurable results.
           </p>
         </div>
 
-        {/* Navigation */}
         <div>
-          <h4 className="font-body text-sm uppercase tracking-widest text-primary mb-4">Navigation</h4>
+          <h4 className="font-body text-sm uppercase tracking-widest text-primary mb-4">
+            Navigation
+          </h4>
           <ul className="space-y-2">
-            {["Home", "Services", "Portfolio", "Process", "Contact"].map((l) => (
-              <li key={l}>
-                <a href={`#${l.toLowerCase()}`} className="text-muted-foreground font-body text-sm hover:text-primary transition-colors">
-                  {l}
+            {[
+              ["Home", "/"],
+              ["About", "/about"],
+              ["Services", "/services"],
+              ["Portfolio", "/portfolio"],
+              ["Process", "/process"],
+            ].map(([label, href]) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  className="text-muted-foreground font-body text-sm hover:text-primary transition-colors"
+                >
+                  {label}
                 </a>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Contact Info */}
         <div>
-          <h4 className="font-body text-sm uppercase tracking-widest text-primary mb-4">Contact</h4>
+          <h4 className="font-body text-sm uppercase tracking-widest text-primary mb-4">
+            Offices
+          </h4>
           <ul className="space-y-2 text-muted-foreground font-body text-sm">
-            <li>Marina Bay Shipyard, Monaco</li>
+            <li>Monaco • London • Fort Lauderdale • Dubai</li>
             <li>+377 00 000 000</li>
-            <li>info@meridian-yachts.com</li>
+            <li>advisory@meridian-yachts.com</li>
           </ul>
           <div className="flex gap-4 mt-6">
             {[Instagram, Facebook, Twitter, Linkedin].map((Icon, i) => (
