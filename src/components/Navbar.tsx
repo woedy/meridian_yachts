@@ -38,7 +38,7 @@ const Navbar = () => {
           href="#contact"
           className="hidden md:inline-block text-sm font-body tracking-wider uppercase border border-primary text-primary px-5 py-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
         >
-          Inquire
+          Speak with an Advisor
         </a>
 
         <button
